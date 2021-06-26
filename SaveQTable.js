@@ -3,7 +3,8 @@ console.log("Started Program");
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
 
-var filename = "qtable60min.json";
+var filename = "qtable60min.json"; // User can alter this variable
+var trainingtime = 60*60*1000; // User can alter this variable
 
 var blackbg = new Image();
 var redplayer = new Image();
@@ -547,7 +548,7 @@ function train_ai(training_time){
 
 var start = Date.now();
 console.log("Started Training");
-train_ai(60*60*1000);
+train_ai(trainingtime);
 
 save_qtable();
 
